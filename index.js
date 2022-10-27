@@ -7,7 +7,7 @@ const { generateMarkdown } = require('./utils/generateMarkdown');
 const questions = () => {
     return inquirer.prompt([{
         type: 'input',
-        name: 'title',
+        name: 'Title',
         message: 'What is the title of your project? (Required)',
         validate: function(name) {
             if (name) {
@@ -19,7 +19,7 @@ const questions = () => {
         }
     }, {
         type: 'input',
-        name: 'user',
+        name: 'User',
         message: 'What is your GitHub username? (Required)',
         validate: function(name) {
             if (name) {
@@ -57,8 +57,7 @@ const questions = () => {
         type: 'list',
         name: 'License',
         message: 'What is the license of your project?',
-        choices: ['MIT', 'ISC', 'GNU LGPL', 'Unlicense', 'none'],
-        default: 'MIT'
+        choices: ['No License','GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0'],
     }])
     .then(input => {
         return input;
