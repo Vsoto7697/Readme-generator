@@ -1,18 +1,18 @@
 const fs = require("fs");
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(License) {
-  if (License === "GNU AGPLv3") {
+function renderLicenseBadge(license) {
+  if (license === "GNU AGPLv3") {
     return "[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)";
-  } else if (License === "GNU GPLv3") {
+  } else if (license === "GNU GPLv3") {
     return "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
-  } else if (License === "GNU LGPLv3") {
+  } else if (license === "GNU LGPLv3") {
     return "[![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)";
-  } else if (License === "Mozilla") {
+  } else if (license === "Mozilla") {
     return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)";
-  } else if (License === "MIT") {
+  } else if (license === "MIT") {
     return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
-  } else if (License === "Apache") {
+  } else if (license === "Apache") {
     return "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
   } else {
     // If there is no license, return an empty string
@@ -22,30 +22,30 @@ function renderLicenseBadge(License) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseSection(License) {
-  if (!License) {
+function renderLicenseSection(license) {
+  if (!license) {
     return ``;
   } else {
     return `## License  
-  This project is covered under the ${License} license.`;
+  This project is covered under the ${license} license.`;
   }
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(License) {
-  if (!License) {
+function renderLicenseSection(license) {
+  if (!license) {
     return ``;
   } else {
     return `## License  
-  This project is covered under the ${License} license.`;
+  This project is covered under the ${license} license.`;
   }
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.Title}
-  ${renderLicenseBadge(data.License)}
+  return `# ${data.title}
+  ${renderLicenseBadge(data.license)}
   ## Table of Contents
   * [Description](#Description)
   * [Installation](#Installation)
@@ -53,24 +53,22 @@ function generateMarkdown(data) {
   * [Licenses](#License)
   * [Contributing](#Contribution)
   * [Tests](#Test)
-  * [Credits](#credits)
+  * [Credits](#Credits)
   ## Description
-  ${data.Description}
+  ${data.description}
   ## Installation
-  ${data.Installation}
+  ${data.installation}
   ## Usage
-  ${data.Usage}
-  ${renderLicenseSection(data.License)}
+  ${data.usage}
+  ${renderLicenseSection(data.license)}
   ## Contributing
-  ${data.Contribution}
+  ${data.contribution}
   ## Tests
-  ${data.Test}
+  ${data.test}
   ## Questions
   Have questions about this project?  
   GitHub: https://github.com/${data.github}  
   Email: ${data.email}
-  ## Credits
-  ${data.name}
 `;
 }
 

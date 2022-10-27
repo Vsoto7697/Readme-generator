@@ -9,20 +9,19 @@ const questions = () => {
     .prompt([
       {
         type: "input",
-        name: "Title",
+        name: "title",
         message: "What is the title of your project? (Required)",
         validate: function (name) {
           if (name) {
             return true;
           } else {
             console.log("Please enter a title for your project!");
-            return false;
           }
         },
       },
       {
         type: "input",
-        name: "User",
+        name: "github",
         message: "What is your GitHub username? (Required)",
         validate: function (name) {
           if (name) {
@@ -35,37 +34,37 @@ const questions = () => {
       },
       {
         type: "input",
-        name: "Email",
+        name: "email",
         message: "What is your email?",
       },
       {
         type: "input",
-        name: "Description",
+        name: "description",
         message: "What is the project description?",
       },
       {
         type: "input",
-        name: "Installation",
+        name: "installation",
         message: "What are the project installation instructions?",
       },
       {
         type: "input",
-        name: "Usage",
+        name: "usage",
         message: "What are the intended uses of the project?",
       },
       {
         type: "input",
-        name: "Contribution",
+        name: "contribution",
         message: "What are the guidelines for contributions to your project?",
       },
       {
         type: "input",
-        name: "Test",
+        name: "test",
         message: "What are the test instruction for your project?",
       },
       {
         type: "list",
-        name: "License",
+        name: "license",
         message: "What is the license of your project?",
         choices: [
           "No License",
