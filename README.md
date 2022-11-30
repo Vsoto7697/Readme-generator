@@ -10,7 +10,7 @@
   * [Credits](#Credits)
   ## Description
   This application allows user to automatically generate a README without having to create one from scratch. Just answer a few questions and watch how the README is automatically generated.
-  ![Screenshot] (videos/samplevideo.jpeg)
+  [(videos/samplevideo.jpeg)](https://youtu.be/8CzK2e7-We8)
   ## Installation
   Before attempting to use this application, make sure you have VS Code, GitBash and Node.JS installed on to your computer. Step 1. Copy link by hitting the "code" button within this GitHub repo Step 2. Using GitBash, use the command "git clone paste link here" Step 3. Use the command "npm init-y" to install Node Package Manager Step 4. Use the command "npm install inquirer" to get npm's inquirer package
   ## Usage
